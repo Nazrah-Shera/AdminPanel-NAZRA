@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "5BdcV/jjgIXrSnlMhhPNOay5UbP1kn01Dn5YNUepvBg=",
+  "Source": "RegisterService",
+  "BasePath": "_content/RegisterService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

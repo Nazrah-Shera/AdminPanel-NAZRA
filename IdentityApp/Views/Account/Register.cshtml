@@ -1,0 +1,409 @@
+﻿@model RegisterViewModel
+
+@{
+    ViewBag.Title = "User Registration";
+    Layout = null;
+}
+
+
+
+<style>
+
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    /* Main Container */
+    .container {
+        display: flex;
+        width: 1532px;
+        height: 730px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    /* Left Side (Striped Design) 
+     .left-side {
+        width: 40%;
+        background-color: #cccccc;
+         background-image: url('/Images/Nazra Logo 3.png');
+        background: repeating-linear-gradient(135deg, #000000cc -22px, #000000cc 20px, white 22px, white 60px);
+       background-repeat: no-repeat;
+        align-items: center;
+        align-content: center;
+        margin: 282px 0 0 92px;
+        width: 40%;
+        height: 153px;
+        padding: -1px -37px -6px -9px;
+        background-color: white; 
+   } */
+
+
+    .left-side {
+        width: 60%;
+        background-color: white;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+        .left-side::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(121deg, rgba(7, 13, 20, 1.5) -13px, /* Semi-transparent black */ rgba(25, -157, 12, -9.5) 41px, rgba(255, 255, 255, 0) 27px, /* Semi-transparent white */ rgba(255, 255, 255, -7.5) 88px);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+    .logo {
+        width: 460px;
+        height: auto;
+    
+        position: relative; /* Ensures the logo stays below the stripes */
+        z-index: 1; /* Keeps the logo behind the stripes */
+
+    }
+
+
+
+    /* Right Side (Login Form) */
+    .right-side {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+    }
+
+    .login-box {
+        width: 80%;
+        text-align: center;
+        max-width: 670px;
+        overflow: hidden; /* Prevent content from overflowing */
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* Form Inputs */
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Options (Remember Me & Reset Password) */
+    .options {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-bottom: 15px;
+        align-items: center; /* Ensure the label and link are aligned */
+    }
+
+        .options a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+
+
+        .options label {
+            display: flex;
+            align-items: center; /* Align checkbox and text vertically */
+            margin: 0; /* Reset margin */
+            white-space: nowrap;
+        }
+
+        .options input[type="checkbox"] {
+            margin: 3px 5px 0 0; /* Adjust margin for proper spacing */
+        }
+
+
+    /* Sign In Button */
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #000000cc;
+        color: white;
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        button:hover {
+            background: #333;
+        }
+
+    /* Sign Up Link */
+    .signup-text {
+        margin-top: 15px;
+    }
+
+        .signup-text a {
+            color: #000000cc;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+    /* Divider */
+    .divider {
+        margin: 15px 0;
+        font-size: 14px;
+    }
+
+    /* Social Buttons */
+    .google-btn, .twitter-btn {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: white;
+        font-size: 16px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .google-btn {
+        color: #db4437;
+    }
+
+    .twitter-btn {
+        color: #1da1f2;
+    }
+
+        .google-btn:hover, .twitter-btn:hover {
+            background: #f0f0f0;
+        }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            height: auto;
+            width: 90%;
+        }
+
+        .left-side {
+            height: 150px;
+            width: 100%;
+        }
+
+        .right-side {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    .divider-container {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
+    .divider-line {
+        flex: 1;
+        height: 1px;
+        background-color: #0000002b;
+    }
+
+    .divider-text {
+        padding: 0 10px;
+        color: #00000091;
+        font-size: 14px;
+    }
+
+
+
+    .social-login {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .google-btn, .twitter-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #000000b0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .google-btn:hover, .twitter-btn:hover {
+            background-color: #f5f5f5;
+        }
+
+        .google-btn img {
+            width: 16px;
+            height: 16px;
+        }
+
+
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: #0000004d;
+    }
+    
+
+    .registerLabels{
+        text-align: left;
+        padding-left: 0;
+        margin-left: 0px;
+        float: left;
+        font-size: 14px;
+        font-family: system-ui;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        color: #0000007d;
+        font-weight: 500;
+    }
+
+    .registerInputs{
+        border-bottom-color: #00000024;
+        border-top-color: white;
+        border-right-color: white;
+        border-radius: 0px;
+        font-size: 16px;
+        border-left-color: white;
+        padding-top: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 5px;
+    }
+</style>
+
+
+@* <h1>User Registration</h1>
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</div> *@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bondroy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <div class="container">
+        <div class="left-side" >
+
+            <img src="~/Images/Nazra Logo 3.png" alt="Nazra Logo" class="logo" >
+
+        </div>
+        <div class="right-side">
+            <div class="login-box">
+                <!-- Logo -->
+
+
+                <p style="color: #000000c2;font-family: system-ui;font-size: 23px;font-weight: bold;    text-align: left;">Sign Up</p>
+                <form method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <label asp-for="FullName" class="registerLabels" >Full Name</label>
+                    <input class="registerInputs" type="text" asp-for="FullName" placeholder="Name..." required>
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+
+                    <label asp-for="Email" class="registerLabels">Email</label>
+                    <input class="registerInputs" type="email" asp-for="Email" placeholder="Email address..." required>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                    <label asp-for="UserName" class="registerLabels">User Name</label>
+                    <input class="registerInputs" type="text" asp-for="UserName" placeholder="username..." required>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+
+                    <label asp-for="Password" class="registerLabels">Password</label>
+                    <input class="registerInputs" type="password" asp-for="Password" placeholder="**********" required>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+
+                    <label asp-for="ConfirmPassword" class="registerLabels">Repeat Password</label>
+                    <input class="registerInputs" type="password" asp-for="ConfirmPassword" placeholder="**********" required>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+
+                    <div class="options" >
+                        <label for="Terms" style="color: #000000b0;font-family: system-ui;font-size: 13px;">
+                            <input type="checkbox" id="Terms" > I agree to the Terms of User
+                        </label>
+                    </div>
+
+                    <div class="buttons" style="    display: flex;">
+                        <button type="submit" style="font-family:system-ui;font-size: 15px;     border-radius: 22px;">
+                            Sign up
+                        </button>
+                        <button type="submit" style="font-family:system-ui;font-size: 15px;    background: none; color: #000000b0;">
+                            Sign In
+                        </button>
+
+                </div>
+                   
+                </form>
+            
+     
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

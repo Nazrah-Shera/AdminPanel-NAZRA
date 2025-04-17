@@ -1,0 +1,331 @@
+﻿@model LoginViewModel
+
+@{
+    ViewBag.Title = "Login - Nazra";
+    Layout = null;
+}
+
+
+<style>
+
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    /* Main Container */
+    .container {
+        display: flex;
+        width: 1532px;
+        height: 730px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    /* Left Side (Striped Design) */
+    .left-side {
+        width: 40%;
+        background: repeating-linear-gradient(135deg, #000000cc -22px, #000000cc 20px, white 22px, white 60px);
+    }
+
+    /* Right Side (Login Form) */
+    .right-side {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+    }
+
+    .login-box {
+        width: 80%;
+        text-align: center;
+        max-width: 670px;
+        overflow: hidden; /* Prevent content from overflowing */
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* Form Inputs */
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Options (Remember Me & Reset Password) */
+    .options {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-bottom: 15px;
+        align-items: center; /* Ensure the label and link are aligned */
+    }
+
+        .options a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+
+
+        .options label {
+            display: flex;
+            align-items: center; /* Align checkbox and text vertically */
+            margin: 0; /* Reset margin */
+            white-space: nowrap;
+        }
+
+        .options input[type="checkbox"] {
+            margin: 3px 5px 0 0; /* Adjust margin for proper spacing */
+        }
+
+
+    /* Sign In Button */
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #000000cc;
+        color: white;
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        button:hover {
+            background: #333;
+        }
+
+    /* Sign Up Link */
+    .signup-text {
+        margin-top: 15px;
+    }
+
+        .signup-text a {
+            color: #000000cc;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+    /* Divider */
+    .divider {
+        margin: 15px 0;
+        font-size: 14px;
+    }
+
+    /* Social Buttons */
+    .google-btn, .twitter-btn {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: white;
+        font-size: 16px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .google-btn {
+        color: #db4437;
+    }
+
+    .twitter-btn {
+        color: #1da1f2;
+    }
+
+        .google-btn:hover, .twitter-btn:hover {
+            background: #f0f0f0;
+        }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .container
+
+    {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .left-side {
+        height: 150px;
+        width: 100%;
+    }
+
+    .right-side {
+        width: 100%;
+        padding: 20px;
+    }
+
+    }
+
+    .divider-container {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
+    .divider-line {
+        flex: 1;
+        height: 1px;
+        background-color: #0000002b;
+    }
+
+    .divider-text {
+        padding: 0 10px;
+        color: #00000091;
+        font-size: 14px;
+    }
+
+
+
+    .social-login {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .google-btn, .twitter-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #000000b0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .google-btn:hover, .twitter-btn:hover {
+            background-color: #f5f5f5;
+        }
+
+        .google-btn img {
+            width: 16px;
+            height: 16px;
+        }
+</style>
+
+
+@* <h1>User Login</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label asp-for="RememberMe">
+                        <input asp-for="RememberMe" />
+                        @Html.DisplayNameFor(m => m.RememberMe)
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div> *@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bondroy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side"></div>
+        <div class="right-side">
+            <div class="login-box">
+                <!-- Logo -->
+
+                <img src="~/Images/Nazra Logo 3.png" alt="Nazra Logo" class="logo" style="width: 129px;height: auto;">
+
+                <p style="color: #000000c2;font-family: system-ui;font-size: 23px;font-weight: 300;">Welcome back!</p>
+                <form method="post">
+                    <input type="hidden" name="ReturnUrl" value="@ViewData["ReturnUrl"]" />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <input type="email" asp-for="Email" placeholder="name@email.com" required>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                    <input type="password" asp-for="Password" placeholder="Password" required>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+
+                    <div class="options">
+                        <label for="RememberMe" style="color: #000000b0;font-family: system-ui;font-size: 13px;" asp-for="RememberMe">
+                            <input type="checkbox" id="RememberMe" asp-for="RememberMe">@Html.DisplayNameFor(m => m.RememberMe)
+                        </label>
+                        <a style="color: #000000b0;font-family: system-ui;font-size: 13px;" href="#">Reset password</a>
+                    </div>
+                    <button type="submit" style="font-family:system-ui;font-size: 18px;">
+                        Sign in
+                    </button>
+                </form>
+                <p class="signup-text" style="color: #000000b0;text-align: left;font-size: 13px;  font-family: system-ui;">
+                    Don't have an account?
+                    <a  style=" color: #000000b0;font-size: 14px;font-family: system-ui;" asp-controller="account" asp-action="register">Sign up</a>
+                </p>
+           
+                  <div class="divider-container">
+                    <div class="divider-line"></div>
+                    <div class="divider-text">or</div>
+                    <div class="divider-line"></div>
+                </div>
+ 
+
+                <div class="social-login">
+                   
+
+                    <button class="google-btn" style="color: #000000b0;font-family: system-ui;font-size: 13px;">
+                        <img src="Images/icons8-google-48.png" alt="Google Icon">
+                        Continue with Google
+                    </button>
+                    <button class="google-btn" style="color: #000000b0;font-family: system-ui;font-size: 13px;">
+                        <img src="Images/icons8-instagram-48.png" alt="Insta Icon">
+                        Continue with Instagram
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
