@@ -1002,8 +1002,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6r4nrstwnb</Fingerprint>
-      <Integrity>0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0=</Integrity>
+      <Fingerprint>gg8ujn6aq7</Fingerprint>
+      <Integrity>sOo/ibFnkC7S6cm8S5aGEAca7cRZVyM8IFo73ALE8EM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\BackOfficeUser.js'))</OriginalItemSpec>

@@ -9,5 +9,6 @@ namespace IdentityApp.Interface
         IEnumerable<TBackOfficeUser> GetUsers();
         bool IsEmailExists(string email);
         bool UpdateUser(vm_AddUser model);
+        void DeleteUser(string userId);
     }
 }

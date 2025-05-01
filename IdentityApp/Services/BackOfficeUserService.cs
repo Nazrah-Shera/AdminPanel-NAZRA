@@ -76,5 +76,10 @@ namespace IdentityApp.Services
             }
         }
 
+
+        public void DeleteUser(string userId)
+        {
+            _backOfficeUserRepo.DeleteUser(userId);
+        }
     }
 }

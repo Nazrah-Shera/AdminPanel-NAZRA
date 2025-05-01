@@ -47,6 +47,15 @@ namespace IdentityApp.Repositories
             _context.SaveChanges();
         }
 
+        public void DeleteUser(string userId)
+        {
+            var user = _context.T_backOfficeUsers.FirstOrDefault(u => u.UserID == userId);
+            if (user != null)
+            {
+                _context.T_backOfficeUsers.Remove(user);
+                _context.SaveChanges();
+            }
+        }
 
     }
 }

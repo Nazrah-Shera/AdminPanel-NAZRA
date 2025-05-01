@@ -184,5 +184,64 @@ namespace IdentityApp.Controllers
             }
         }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteUser(string userId)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(userId))
+                    return Json(new { success = false, message = "Invalid user ID." });
+
+                // Find Identity user
+                var identityUser = await _userManager.FindByIdAsync(userId);
+                if (identityUser == null)
+                    return Json(new { success = false, message = "User not found in Identity." });
+
+                // Delete from Identity
+                var result = await _userManager.DeleteAsync(identityUser);
+                if (!result.Succeeded)
+                {
+                    var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                    return Json(new { success = false, message = "Error deleting Identity user: " + errors });
+                }
+
+                // Delete from your custom table
+                _backOfficeUserService.DeleteUser(userId);
+
+                // Log the deletion
+                _loggingService.LogApplication(
+                    userId: userId,
+                    logLevel: "Success",
+                    module: "UserManagement",
+                    action: "DeleteUser",
+                    message: "User deleted successfully!",
+                    exception: "",
+                    ipAddress: "",
+                    requestParameters: $"UserId={userId}",
+                    responseParameters: ""
+                );
+
+                return Json(new { success = true, message = "User deleted successfully!" });
+            }
+            catch (Exception ex)
+            {
+                _loggingService.LogApplication(
+                    userId: userId,
+                    logLevel: "Exception",
+                    module: "UserManagement",
+                    action: "DeleteUser",
+                    message: "Exception occurred while deleting user.",
+                    exception: ex.ToString(),
+                    ipAddress: "",
+                    requestParameters: $"UserId={userId}",
+                    responseParameters: ""
+                );
+
+                return Json(new { success = false, message = "An unexpected error occurred. Please try again later." });
+            }
+        }
+
     }
 }

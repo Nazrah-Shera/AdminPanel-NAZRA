@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vxP85fNyvvwAn0iQN3JBAyB/3oHkkaKOsUj0FbT8APM=",
+  "Hash": "54lRnxpZ5Wwk9tMhw8HGa3Z4IQH2E8T8a2ikEIAJ1s8=",
   "Source": "IdentityApp",
   "BasePath": "_content/IdentityApp",
   "Mode": "Default",
@@ -2467,8 +2467,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6r4nrstwnb",
-      "Integrity": "0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0=",
+      "Fingerprint": "gg8ujn6aq7",
+      "Integrity": "sOo/ibFnkC7S6cm8S5aGEAca7cRZVyM8IFo73ALE8EM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\BackOfficeUser.js"
@@ -11241,7 +11241,7 @@
       ]
     },
     {
-      "Route": "js/BackOfficeUser.6r4nrstwnb.js",
+      "Route": "js/BackOfficeUser.gg8ujn6aq7.js",
       "AssetFile": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\BackOfficeUser.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -11251,7 +11251,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6616"
+          "Value": "10511"
         },
         {
           "Name": "Content-Type",
@@ -11259,11 +11259,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0=\""
+          "Value": "\"sOo/ibFnkC7S6cm8S5aGEAca7cRZVyM8IFo73ALE8EM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 13:14:19 GMT"
+          "Value": "Thu, 01 May 2025 11:34:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11273,7 +11273,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6r4nrstwnb"
+          "Value": "gg8ujn6aq7"
         },
         {
           "Name": "label",
@@ -11281,7 +11281,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0="
+          "Value": "sha256-sOo/ibFnkC7S6cm8S5aGEAca7cRZVyM8IFo73ALE8EM="
         }
       ]
     },
@@ -11296,7 +11296,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6616"
+          "Value": "10511"
         },
         {
           "Name": "Content-Type",
@@ -11304,11 +11304,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0=\""
+          "Value": "\"sOo/ibFnkC7S6cm8S5aGEAca7cRZVyM8IFo73ALE8EM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 13:14:19 GMT"
+          "Value": "Thu, 01 May 2025 11:34:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11318,7 +11318,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0="
+          "Value": "sha256-sOo/ibFnkC7S6cm8S5aGEAca7cRZVyM8IFo73ALE8EM="
         }
       ]
     },

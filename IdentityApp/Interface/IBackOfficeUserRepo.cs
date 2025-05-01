@@ -10,5 +10,6 @@ namespace IdentityApp.Interface
         bool IsEmailExists(string email);
         TBackOfficeUser GetUserByUserId(string UserId);
         void UpdateUser(TBackOfficeUser user);
+        void DeleteUser(string userId);
     }
 }
