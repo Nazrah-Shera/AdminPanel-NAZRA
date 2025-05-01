@@ -1,1 +1,6 @@
 # Ignore folders 
+.vs/
+*.user
+*.suo
+bin/
+obj/

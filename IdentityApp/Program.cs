@@ -1,3 +1,4 @@
+using IdentityApp.Areas.Identity;
 using IdentityApp.Database;
 using IdentityApp.Interface;
 using IdentityApp.Repositories;
@@ -16,12 +17,18 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //nazrah
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
-    options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+//builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+//    options.SignIn.RequireConfirmedAccount = true)
+//    .AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Services.AddScoped<IApplicationUserRepo, ApplicationUserRepo>();
-builder.Services.AddScoped<IApplicationUserService, ApplicationUserService>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+       .AddEntityFrameworkStores<ApplicationDbContext>()
+       .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IBackOfficeUserRepo, BackOfficeRepo>();
+builder.Services.AddScoped<IBackOfficeUserService, BackOfficeUserService>();
+
+builder.Services.AddScoped<LoggingService>();  // Register LoggingService as a scoped service
 
 // Configure the Application Cookie settings
 builder.Services.ConfigureApplicationCookie(options =>

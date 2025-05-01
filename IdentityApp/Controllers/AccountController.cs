@@ -1,4 +1,5 @@
-﻿using IdentityApp.Models;
+﻿using IdentityApp.Areas.Identity;
+using IdentityApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,14 +11,14 @@ namespace IdentityApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         //userManager will hold the UserManager instance
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<ApplicationUser> userManager;
         //signInManager will hold the SignInManager instance
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly SignInManager<ApplicationUser> signInManager;
 
         //Both UserManager and SignInManager services are injected into the AccountController
         //using constructor injection
-        public AccountController(UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,ILogger<HomeController> logger)
+        public AccountController(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,ILogger<HomeController> logger)
         {
             _logger = logger;
             this.userManager = userManager;
@@ -37,7 +38,7 @@ namespace IdentityApp.Controllers
             if (ModelState.IsValid)
             {
                 // Copy data from RegisterViewModel to IdentityUser
-                var user = new IdentityUser
+                var user = new ApplicationUser
                 {
                     UserName = model.Email,
                     Email = model.Email
@@ -141,5 +142,8 @@ namespace IdentityApp.Controllers
             }
         }
 
+   
+    
+    
     }
 }

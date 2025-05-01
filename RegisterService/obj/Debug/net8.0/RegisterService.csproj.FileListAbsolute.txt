@@ -17,6 +17,7 @@ C:\Users\Danish Laptop\source\repos\L'Amour By Nazrah Ateeb\RegisterService\obj\
 C:\Users\Danish Laptop\source\repos\L'Amour By Nazrah Ateeb\RegisterService\obj\Debug\net8.0\RegisterService.csproj.CoreCompileInputs.cache
 C:\Users\Danish Laptop\source\repos\L'Amour By Nazrah Ateeb\RegisterService\obj\Debug\net8.0\RegisterService.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Danish Laptop\source\repos\L'Amour By Nazrah Ateeb\RegisterService\obj\Debug\net8.0\RegisterService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Danish Laptop\source\repos\L'Amour By Nazrah Ateeb\RegisterService\obj\Debug\net8.0\RegisterService.sourcelink.json
 C:\Users\Danish Laptop\source\repos\L'Amour By Nazrah Ateeb\RegisterService\obj\Debug\net8.0\scopedcss\bundle\RegisterService.styles.css
 C:\Users\Danish Laptop\source\repos\L'Amour By Nazrah Ateeb\RegisterService\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Danish Laptop\source\repos\L'Amour By Nazrah Ateeb\RegisterService\obj\Debug\net8.0\staticwebassets.development.json

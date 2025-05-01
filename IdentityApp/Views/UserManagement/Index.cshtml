@@ -3,52 +3,100 @@
 @{
     ViewData["Title"] = "User Management - Add User";
 
+    TempData.Keep(); // ✅ Needed for TempData to persist after redirect
+
 }
 
 @section PageScripts {
     <script src="~/js/form-basic-inputs.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/BackOfficeUser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <div class="modal fade" id="userListModal" tabindex="-1" aria-labelledby="userListModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userListModalLabel">Select User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered" id="userTable">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Select</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JS will populate rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
 }
 @* ************** Content ************** *@
 
+
+
 <form method="post" id="userForm">
-<div class="card">
-    <div class="card-body">
+    @Html.AntiForgeryToken()
+    <div class="card">
+        <div class="card-body">
+           
+                <input type="hidden" id="UserID" name="UserID" value="" />
+                <input type="hidden" id="editMode" name="editMode" value="false" />
+           
+            <button type="button" class="btn btn-secondary mb-3" data-bs-toggle="modal" data-bs-target="#userListModal">
+                Search & Select User
+            </button>
 
-<div class="row g-12">
-
-    <div class="col-md-6">
-                <div class="mb-4">
-                    <label for="defaultFormControlInput" class="form-label">Full Name</label>
-                        <input asp-for="FullName" type="text" class="form-control" id="defaultFormControlInput" placeholder="Nazrah Shera" aria-describedby="defaultFormControlHelp" />
-                        <span asp-validation-for="FullName" class="text-danger"></span>
-@*                     <div id="defaultFormControlHelp" class="form-text">We'll never share your details with anyone else.</div>
- *@                </div>
-    </div>
-    <div class="col-md-6">
-                <div class="mb-4">
-                    <label for="defaultFormControlInput" class="form-label">Username / Email</label>
-                    <input asp-for="Email" type="text" class="form-control" id="defaultFormControlInput" placeholder="nazrah@nazra.com" aria-describedby="defaultFormControlHelp" />
-
-                        <span asp-validation-for="Email" class="text-danger"></span>
-@*                     <div id="defaultFormControlHelp" class="form-text">We'll never share your details with anyone else.</div>
- *@                </div>
-    </div>
-    </div>
+         
+           @*  <div class="row g-12">
+            <div class="input-group input-group-merge">
+                <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon-search31" />
+            </div>
+            </div> *@
 
         <div class="row g-12">
+        <div class="col-md-6">
+                <div class="mb-4">
+                        <label for="FullName" class="form-label">Full Name</label>
+                        <input asp-for="FullName" type="text" class="form-control" id="FullName" placeholder="Nazrah Shera" aria-describedby="defaultFormControlHelp" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+               </div>
+        </div>
+        <div class="col-md-6">
+                <div class="mb-4">
+                        <label for="Email" class="form-label">Username / Email</label>
+                        <input asp-for="Email" type="text" class="form-control" id="Email" placeholder="nazrah@nazra.com" aria-describedby="defaultFormControlHelp" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+               </div>
+        </div>
+        </div>
 
+        <div class="row g-12">
             <div class="col-md-6">
                 <div class="mb-4">
-                    <label for="defaultFormControlInput" class="form-label">Phone Number</label>
-                    <input asp-for="PhoneNumber" type="text" class="form-control" id="defaultFormControlInput" placeholder="Nazrah Shera" aria-describedby="defaultFormControlHelp" />
+                        <label for="PhoneNumber" class="form-label">Phone Number</label>
+                        <input asp-for="PhoneNumber" type="text" class="form-control" id="PhoneNumber" placeholder="Nazrah Shera" aria-describedby="defaultFormControlHelp" />
                         <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                 </div>
             </div>
             <div class="col-md-6">
                 <div>
                     <div class="mb-4">
-                        <label for="defaultSelect" class="form-label">Maximum Roles Allowed</label>
-                        <select id="defaultSelect" asp-for="MaxRolesAllowed" class="form-select">
+                            <label for="MaxRolesAllowed" class="form-label">Maximum Roles Allowed</label>
+                            <select id="MaxRolesAllowed" asp-for="MaxRolesAllowed" class="form-select">
                             <option value="">Select</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -62,25 +110,21 @@
             </div>
         </div>
 
-
-
         <div class="row g-12">
 
             <div class="col-md-6">
                 <div class="mb-4">
-                    <label for="defaultFormControlInput" class="form-label">Password</label>
-                    <input asp-for="Password" type="password" class="form-control" id="defaultFormControlInput" placeholder="Nazrah Shera" aria-describedby="defaultFormControlHelp" />
+                        <label for="Password" class="form-label">Password</label>
+                        <input asp-for="Password" type="password" class="form-control" id="Password" placeholder="Nazrah Shera" aria-describedby="defaultFormControlHelp" />
                         <span asp-validation-for="Password" class="text-danger"></span>
-                    @*                     <div id="defaultFormControlHelp" class="form-text">We'll never share your details with anyone else.</div>
- *@                </div>
+               </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-4">
-                    <label for="defaultFormControlInput" class="form-label">Confirm Password</label>
-                    <input asp-for="ConfirmPaaword" type="password" class="form-control" id="defaultFormControlInput" placeholder="nazrah@nazra.com" aria-describedby="defaultFormControlHelp" />
-                        <span asp-validation-for="ConfirmPaaword" class="text-danger"></span>
-                    @*                     <div id="defaultFormControlHelp" class="form-text">We'll never share your details with anyone else.</div>
- *@                </div>
+                        <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" id="ConfirmPassword" placeholder="nazrah@nazra.com" aria-describedby="defaultFormControlHelp" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+               </div>
             </div>
         </div>
 
@@ -90,46 +134,55 @@
                 <div class="mt-6">
 
                     <div class="form-check form-switch mb-2">
-                        <input asp-for="IsActive" class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Status (Active/Not Active)</label>
+                            <input asp-for="IsActive" class="form-check-input" type="checkbox" id="IsActive" checked>
+                            <label class="form-check-label" for="IsActive">Status (Active/Not Active)</label>
                             <span asp-validation-for="IsActive" class="text-danger"></span>
                     </div>
 
              </div>
             </div>
-            <div class="col-md-6">
-                <div class="mt-0">
 
-                    <div class="mb-4">
-                        <label for="formFile" class="form-label">Profile Picture</label>
-                        <input class="form-control" asp-for="ProfilePicture" type="file" id="formFile">
-                            <span asp-validation-for="ProfilePicture" class="text-danger"></span>
-                    </div>
-                
-                </div>
-            </div>
         </div>
 
-
-
-
+       
 
         <!--Buttons-->
-        <div class="row g-12">
+      @*   <div class="row g-12">
             <!-- Basic Buttons -->
 
             <div class="col-12">
              
                         <div class="demo-inline-spacing">
-                        <button type="button" class="btn btn-success" id="btnAdd">ADD</button>
-                            <button type="button" class="btn btn-danger">DELETE</button>
+                        <button type="submit" class="btn btn-success" id="btnAdd">ADD</button>
+                            <button type="submit" class="btn btn-danger">DELETE</button>
                             <button type="button" class="btn btn-warning">EDIT</button>
                             <button type="button" class="btn btn-info">CANCEL</button>
+
                         </div>
                
             </div>
 
-        </div>
+        </div> *@
+
+
+            <div class="row mt-4 align-items-center">
+                <!-- Left-aligned buttons -->
+                <div class="col d-flex gap-2">
+                    <div class="demo-inline-spacing">
+                        <button type="submit" class="btn btn-success" id="btnAdd">ADD</button>
+                        <button type="button" class="btn btn-warning" id="btnEdit">EDIT</button>
+                        <button type="submit" class="btn btn-danger">DELETE</button>
+                        <button type="button" class="btn btn-info">CANCEL</button>
+
+                    </div>
+                </div>
+
+                <!-- Right-aligned Save button -->
+                <div class="col text-end">
+                    <button type="submit" class="btn btn-primary" id="btnSave">SAVE</button>
+                </div>
+            </div>
+
 
     </div>
 
@@ -139,8 +192,3 @@
 
 </form>
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/ApplicationUser.js"></script>

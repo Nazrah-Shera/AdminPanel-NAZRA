@@ -1,19 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityApp.ViewModels
 {
     public class vm_AddUser
     {
-        public Guid UserID { get; set; }
+        public string UserID { get; set; }
 
-        [Required(ErrorMessage = "The full name is required")]
         [StringLength(100, ErrorMessage = "Full Name cannot exceed 100 characters.")]
         [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Full Name can only contain letters and spaces.")]
+        [Required(ErrorMessage = "The full name is required")]
+
         public string FullName { get; set; }
 
         [Display(Name = "Email Address")]
         [Required(ErrorMessage = "The email address is required")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
+      //  [Remote(action: "IsEmailAvailable", controller: "Account")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Phone number is required.")]
@@ -21,12 +24,12 @@ namespace IdentityApp.ViewModels
         [RegularExpression(@"^\+?[0-9]{10,15}$", ErrorMessage = "Enter a valid phone number.")]
         public string PhoneNumber { get; set; }
 
-        [Required(ErrorMessage = "Please select the no. of roles you want to allow the user.")]
+        [Required(ErrorMessage = "Please select maximum roles allowed.")]
         public int MaxRolesAllowed { get; set; }
 
         public bool IsActive { get; set; }
 
-        public string? ProfilePicture { get; set; }
+        //public string? ProfilePicture { get; set; }
 
         public DateTime CreatedOn { get; set; }
 
@@ -36,6 +39,6 @@ namespace IdentityApp.ViewModels
         public string Password { get; set; }
         [Required(ErrorMessage = "Confirmation Password is required.")]
         [Compare("Password", ErrorMessage = "Password and Confirmation Password must match.")]
-        public string ConfirmPaaword { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 }

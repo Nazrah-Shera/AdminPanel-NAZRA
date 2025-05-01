@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0XGyrrAieGjW/tBKPPDMfr9HbYm4RD0VU36pZvGUF04=",
+  "Hash": "5ljo4/xPUy0OInhVpEj6FOZS3CRGjK3DpJd+8j80e7E=",
   "Source": "IdentityApp",
   "BasePath": "_content/IdentityApp",
   "Mode": "Default",
@@ -2453,12 +2453,12 @@
       "OriginalItemSpec": "wwwroot\\img\\layouts\\layout-without-navbar-light.png"
     },
     {
-      "Identity": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\ApplicationUser.js",
+      "Identity": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\BackOfficeUser.js",
       "SourceId": "IdentityApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\",
       "BasePath": "_content/IdentityApp",
-      "RelativePath": "js/ApplicationUser#[.{fingerprint}]?.js",
+      "RelativePath": "js/BackOfficeUser#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2467,11 +2467,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "e9bemvptfi",
-      "Integrity": "grLk6KGXFCV9uvM/EOYOb1xnZjqsWUUj3UeGPyMnl7M=",
+      "Fingerprint": "6r4nrstwnb",
+      "Integrity": "0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\ApplicationUser.js"
+      "OriginalItemSpec": "wwwroot\\js\\BackOfficeUser.js"
     },
     {
       "Identity": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\config.js",
@@ -6999,7 +6999,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 06:12:31 GMT"
+          "Value": "Tue, 29 Apr 2025 12:31:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7036,7 +7036,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 06:12:31 GMT"
+          "Value": "Tue, 29 Apr 2025 12:31:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7081,7 +7081,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 06:12:31 GMT"
+          "Value": "Tue, 29 Apr 2025 12:31:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7126,7 +7126,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 06:12:31 GMT"
+          "Value": "Tue, 29 Apr 2025 12:31:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11241,8 +11241,8 @@
       ]
     },
     {
-      "Route": "js/ApplicationUser.e9bemvptfi.js",
-      "AssetFile": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\ApplicationUser.js",
+      "Route": "js/BackOfficeUser.6r4nrstwnb.js",
+      "AssetFile": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\BackOfficeUser.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11251,7 +11251,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1179"
+          "Value": "6616"
         },
         {
           "Name": "Content-Type",
@@ -11259,11 +11259,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"grLk6KGXFCV9uvM/EOYOb1xnZjqsWUUj3UeGPyMnl7M=\""
+          "Value": "\"0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 05:14:09 GMT"
+          "Value": "Tue, 29 Apr 2025 13:14:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11273,21 +11273,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "e9bemvptfi"
+          "Value": "6r4nrstwnb"
         },
         {
           "Name": "label",
-          "Value": "js/ApplicationUser.js"
+          "Value": "js/BackOfficeUser.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-grLk6KGXFCV9uvM/EOYOb1xnZjqsWUUj3UeGPyMnl7M="
+          "Value": "sha256-0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0="
         }
       ]
     },
     {
-      "Route": "js/ApplicationUser.js",
-      "AssetFile": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\ApplicationUser.js",
+      "Route": "js/BackOfficeUser.js",
+      "AssetFile": "C:\\Users\\Danish Laptop\\source\\repos\\L'Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\BackOfficeUser.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11296,7 +11296,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1179"
+          "Value": "6616"
         },
         {
           "Name": "Content-Type",
@@ -11304,11 +11304,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"grLk6KGXFCV9uvM/EOYOb1xnZjqsWUUj3UeGPyMnl7M=\""
+          "Value": "\"0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 05:14:09 GMT"
+          "Value": "Tue, 29 Apr 2025 13:14:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11318,7 +11318,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-grLk6KGXFCV9uvM/EOYOb1xnZjqsWUUj3UeGPyMnl7M="
+          "Value": "sha256-0jL+uyOWtpFoiWZCX52rme1S5jx8HXWyY2J8HSUepJ0="
         }
       ]
     },
