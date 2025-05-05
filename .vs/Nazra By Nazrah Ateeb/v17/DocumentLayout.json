@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|solutionrelative:identityapp\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|c:\\users\\danish laptop\\source\\repos\\l\u0027amour by nazrah ateeb\\identityapp\\viewmodels\\vm_adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|solutionrelative:identityapp\\viewmodels\\vm_adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|c:\\users\\danish laptop\\source\\repos\\l\u0027amour by nazrah ateeb\\identityapp\\services\\loggingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|solutionrelative:identityapp\\services\\loggingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|solutionrelative:identityapp\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|c:\\users\\danish laptop\\source\\repos\\l\u0027amour by nazrah ateeb\\identityapp\\services\\backofficeuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|solutionrelative:identityapp\\services\\backofficeuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|c:\\users\\danish laptop\\source\\repos\\l\u0027amour by nazrah ateeb\\identityapp\\views\\shared\\_commonmasterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|solutionrelative:identityapp\\views\\shared\\_commonmasterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C78226D4-F7E2-4045-8197-045B1A12DB58}|IdentityApp\\IdentityApp.csproj|c:\\users\\danish laptop\\source\\repos\\l\u0027amour by nazrah ateeb\\identityapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,33 +98,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "LoggingService.cs",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Services\\LoggingService.cs",
               "RelativeDocumentMoniker": "IdentityApp\\Services\\LoggingService.cs",
               "ToolTip": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Services\\LoggingService.cs",
               "RelativeToolTip": "IdentityApp\\Services\\LoggingService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAArwBQAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAvwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T10:38:09.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BackOfficeUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Services\\BackOfficeUserService.cs",
-              "RelativeDocumentMoniker": "IdentityApp\\Services\\BackOfficeUserService.cs",
-              "ToolTip": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Services\\BackOfficeUserService.cs",
-              "RelativeToolTip": "IdentityApp\\Services\\BackOfficeUserService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T09:53:59.016Z",
+              "WhenOpened": "2025-05-05T11:25:27.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "_CommonMasterLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Shared\\_CommonMasterLayout.cshtml",
+              "RelativeDocumentMoniker": "IdentityApp\\Views\\Shared\\_CommonMasterLayout.cshtml",
+              "ToolTip": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Shared\\_CommonMasterLayout.cshtml",
+              "RelativeToolTip": "IdentityApp\\Views\\Shared\\_CommonMasterLayout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T09:07:54.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserManagementController.cs",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Controllers\\UserManagementController.cs",
               "RelativeDocumentMoniker": "IdentityApp\\Controllers\\UserManagementController.cs",
@@ -141,26 +137,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "vm_AddUser.cs",
-              "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\ViewModels\\vm_AddUser.cs",
-              "RelativeDocumentMoniker": "IdentityApp\\ViewModels\\vm_AddUser.cs",
-              "ToolTip": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\ViewModels\\vm_AddUser.cs",
-              "RelativeToolTip": "IdentityApp\\ViewModels\\vm_AddUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T06:19:29.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\UserManagement\\Index.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Views\\UserManagement\\Index.cshtml",
               "ToolTip": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\UserManagement\\Index.cshtml",
               "RelativeToolTip": "IdentityApp\\Views\\UserManagement\\Index.cshtml",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAK4AAABQAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-06T15:01:34.316Z",
               "EditorCaption": ""
@@ -173,14 +156,14 @@
               "RelativeDocumentMoniker": "IdentityApp\\wwwroot\\js\\BackOfficeUser.js",
               "ToolTip": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\BackOfficeUser.js",
               "RelativeToolTip": "IdentityApp\\wwwroot\\js\\BackOfficeUser.js",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAqwHsAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-23T09:51:11.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "IdentityApp\\Controllers\\AccountController.cs",
@@ -192,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Shared\\Old files\\_Layout.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Views\\Shared\\Old files\\_Layout.cshtml",
@@ -204,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\appsettings.json",
               "RelativeDocumentMoniker": "IdentityApp\\appsettings.json",
@@ -216,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "form-basic-inputs.js",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\wwwroot\\js\\form-basic-inputs.js",
               "RelativeDocumentMoniker": "IdentityApp\\wwwroot\\js\\form-basic-inputs.js",
@@ -228,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Dashboards\\Index.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Views\\Dashboards\\Index.cshtml",
@@ -240,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "_VerticalMenu.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Shared\\Sections\\Menu\\_VerticalMenu.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Views\\Shared\\Sections\\Menu\\_VerticalMenu.cshtml",
@@ -252,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "DashboardsController.cs",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Controllers\\DashboardsController.cs",
               "RelativeDocumentMoniker": "IdentityApp\\Controllers\\DashboardsController.cs",
@@ -264,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Views\\Account\\Register.cshtml",
@@ -276,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "IdentityApp\\Controllers\\HomeController.cs",
@@ -288,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
@@ -300,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "IdentityApp\\Models\\RegisterViewModel.cs",
@@ -312,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Views\\Home\\Index.cshtml",
@@ -324,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "SecureMethod.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Home\\SecureMethod.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Views\\Home\\SecureMethod.cshtml",
@@ -336,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\Danish Laptop\\source\\repos\\L\u0027Amour By Nazrah Ateeb\\IdentityApp\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "IdentityApp\\Views\\Home\\Privacy.cshtml",

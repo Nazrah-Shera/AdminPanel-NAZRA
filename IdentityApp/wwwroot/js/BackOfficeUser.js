@@ -67,8 +67,8 @@
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 // Code when "No" is clicked (optional)
 
-                $('#btnEdit, #btnDelete, #btnSave').prop('disabled', true);
-                $('#btnAdd').prop('disabled', false);
+                $('#btnSave').prop('disabled', true);
+                $('#btnEdit, #btnDelete').prop('disabled', false);
 
             }
         });
@@ -81,7 +81,7 @@
 
     $('#btnCancel').click(function () {
 
-        alert("working");
+      
         $('#userForm')[0].reset(); // reset form fields
         $('#UserID').val(''); // clear hidden userId if you're using it to detect edit mode
         $('#userForm input, #userForm select, #userForm textarea').prop('disabled', true);
@@ -99,7 +99,7 @@
         var action = $('#ActionType').val();
         if (action === 'Add') {
 
-
+            alert("sada");
             var userid = $('#UserID').val('na');
             $.ajax({
                 url: '/UserManagement/AddUser',  // The controller action URL
@@ -110,6 +110,26 @@
                     if (response.success) {
                         $('#btnAdd').prop('disabled', false);
                         $('#btnEdit, #btnDelete, #btnSave').prop('disabled', true);
+
+
+
+                        $('#UserID').val(response.userId);
+
+                        // Add user to the modal table dynamically
+                        const newRow = `
+        <tr data-userid="${response.userId}">
+            <td class="user-name">${response.fullName}</td>
+            <td>${response.email}</td>
+            <td>
+                <button class="btn btn-sm btn-primary select-user" data-userid="${response.userId}" data-fullname="${response.fullName}" data-email="${response.email}">
+                    Select
+                </button>
+            </td>
+        </tr>
+    `;
+                        $('#userTable tbody').append(newRow);
+
+
 
                         $('#userForm input, #userForm select, #userForm textarea').prop('disabled', true);
 
@@ -145,7 +165,8 @@
                 //data: formData,
                 success: function (response) {
                     if (response.success) {
-
+                        $('#btnAdd').prop('disabled', false);
+                        $('#btnEdit, #btnDelete, #btnSave').prop('disabled', true);
                         $('#userForm input, #userForm select, #userForm textarea').prop('disabled', true);
 
                         const userId = $('#UserID').val();
@@ -191,7 +212,11 @@
                 },
                     success: function (response) {
                         if (response.success) {
+                            // Remove the row from the table
+                            $(`#userTable tr[data-userid="${userid}"]`).remove();
 
+                            $('#btnAdd').prop('disabled', false);
+                            $('#btnEdit, #btnDelete, #btnSave').prop('disabled', true);
                             const userId = $('#UserID').val();
                             const updatedName = $('#FullName').val(); // or whatever field you updated
 
@@ -283,10 +308,11 @@
         const userJson = $(this).data('user');
         const user = typeof userJson === 'string' ? JSON.parse(userJson.replace(/&apos;/g, "'")) : userJson;
 
-        $('#btnAdd').prop('disabled', true);
+        $('#btnAdd, #btnSave').prop('disabled', true);
 
         $('#btnEdit').prop('disabled', false);
         $('#btnDelete').prop('disabled', false);
+
 
         // Populate fields
         $('#FullName').val(user.fullName);

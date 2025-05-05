@@ -70,7 +70,10 @@ namespace IdentityApp.Controllers
                 // Example: Log a system event
                 _loggingService.LogApplication(identityUser.Id, "Success", "UserManagement", "AddUser", "User added successfully!","","", JsonSerializer.Serialize(model) ,"Success");
 
-                return Json(new { success = true, message = "User added successfully!" });
+                return Json(new { success = true, message = "User added successfully!", userId = identityUser.Id,
+                    fullName = model.FullName,
+                    email = model.Email
+                });
 
             }
             catch (Exception ex)
